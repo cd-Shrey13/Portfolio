@@ -1,15 +1,15 @@
 import Hero from "./components/Hero";
-import Projects from "./components/Projects";
+// import Projects from "./components/Projects";
 import About from "./components/About";
-import Navbar from "./components/Navbar";
+// import Navbar from "./components/Navbar";
 function Index(){
 
   return (
     <>
-  <Navbar />  
+  {/* <Navbar />   */}
   <Hero />
   <About />
-  <Projects />
+  {/* <Projects /> */}
     </>
   )
 }
