@@ -12,7 +12,8 @@ export default {
       fontFamily:
       {
         'Poppins': ["Poppins", "sans-serif"],
-        'Cascadia': ['Cascadia Code',' sans-serif']
+        'Cascadia': ['Cascadia Code',' sans-serif'],
+        'Boska': ['Boska', 'serif']
         
       }
     },

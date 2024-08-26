@@ -1,17 +1,13 @@
 import Hero from "./components/Hero";
-// import Projects from "./components/Projects";
 import About from "./components/About";
-// import Navbar from "./components/Navbar";
-function Index(){
 
+function Index() {
   return (
     <>
-  {/* <Navbar />   */}
-  <Hero />
-  <About />
-  {/* <Projects /> */}
+      <Hero />
+      <About />
     </>
-  )
+  );
 }
 
-export default Index; 
+export default Index;

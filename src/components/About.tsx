@@ -1,9 +1,31 @@
+import gsap from "gsap";
+gsap.registerPlugin(ScrollTrigger);
 import Image from "../assets/profile-pic (2).png";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/all";
 export default function About() {
+  useGSAP(() => {
+    gsap.to("#circle", {
+      scale: 53,
+      y: -40,
+      yoyo: true,
+      duration: 2,
+      scrollTrigger:{
+        trigger: '#about',
+        markers: true,
+        start: '20% center',
+        end: '50% bottom',
+        toggleActions: "play none none reverse",
+      },
+    });
+  });
   return (
     <>
-      <section className="h-[100vh] w-full bg-[#181818] flex flex-col items-center justify-start py-[2rem]">
-        <span className="flex flex-col justify-center items-start mt-[2rem]">
+      <section
+        id="about"
+        className="h-[100vh] w-full bg-[#181818] flex flex-col items-center justify-start py-[2rem] overflow-hidden"
+      >
+        <span className="flex flex-col justify-center items-start z-10 mt-[3rem]">
           <p className="text-white font-Cascadia text-[28px]">
             Hello,
             <br />
@@ -11,7 +33,7 @@ export default function About() {
           </p>
 
           <span>
-            <h1 className="heading font-Poppins font-[800] text-[2.5rem] leading-[2.8rem] bg-clip-text bg-gradient-to-b from-[#ffffff] to-[#ffffff] text-transparent">
+            <h1 className="name font-Poppins font-[800] text-[2.5rem] leading-[2.8rem] bg-clip-text bg-gradient-to-b from-[#ffffff] to-[#ffffff] text-transparent">
               Shrey Prajapati
             </h1>
             <svg
@@ -44,10 +66,11 @@ export default function About() {
             </svg>
           </span>
         </span>
-        <div>
+        <div className="z-10">
           <img src={Image} alt="Picture" className="size-52" />
         </div>
-        <ul>
+        <div id='circle' className='size-[1rem] bg-orange-500 rounded-full mt-2 relative z-[0]'></div>
+        {/* <ul>
           <li>
             <p className="text-white font-Cascadia text-[12px] max-w-[50ch]">
               I am pursuing bachelors degree in computer science from{" "}
@@ -58,7 +81,7 @@ export default function About() {
           <li></li>
           <li></li>
           <li></li>
-        </ul>
+        </ul> */}
       </section>
     </>
   );
