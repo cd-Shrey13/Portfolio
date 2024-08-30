@@ -14,13 +14,13 @@ export default function Navbar({ className }: navProps) {
           className,
         )}
       >
-        <span>
-          <img src={NameLogo} alt="Logo" />
-        </span>
+        <div className="flex items-center justify-center">
+          <img src={NameLogo} alt="Logo" className=" md:h-12"/>
+        </div>
 
         <span>
-          <a href="mailto:shreyprajapati13@gmail.com" title="Send Mail">
-            <img src={MailLogo} alt="Mail" />
+          <a href="mailto:shreyprajapati13@gmail.com" title="Send Mail" rel="noreferrer">
+            <img src={MailLogo} alt="Mail" className=" md:size-16" />
           </a>
         </span>
         
