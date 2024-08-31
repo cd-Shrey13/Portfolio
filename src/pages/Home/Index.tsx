@@ -1,25 +1,25 @@
 import Hero from "./Hero";
 import Navbar from "../../components/Navbar";
-import Techstack from "./Techstack";
 import Projects from "./Projects";
 import Blogs from "./Blogs";
 import Footer from "../../components/Footer";
+import About from "./About";
 // import HorizontalContainer from "./components/HorizontalContainer";
 // import Projects from "./components/Projects";
 
 function Index() {
   return (
     <>
-      <header>
+      <header className="bg- sticky left-0 top-0 z-[999] backdrop-blur-md">
         <Navbar />
       </header>
       <main>
         <Hero />
-        <Techstack />
+        <About />
         <Projects />
         <Blogs />
       </main>
-      <footer>
+      <footer className="justify-center lg:mb-6 lg:flex">
         <Footer />
       </footer>
       {/* <HorizontalContainer /> */}

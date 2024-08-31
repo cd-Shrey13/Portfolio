@@ -1,38 +1,7 @@
-import { useGSAP } from "@gsap/react";
-import Image from "../assets/profile-pic (2).png";
-import gsap from "gsap";
-import { TextPlugin } from "gsap/all";
-gsap.registerPlugin(TextPlugin);
-
-export default function About() {
-  useGSAP(() => {
-    gsap.to("#name", {
-      // display: 'none',
-      // opacity: 0,
-      duration: 1,
-      // ease: 'bounce.in',
-      text: "Shrey Prajapati",
-      scrollTrigger: {
-        trigger: ".about",
-        start: "top 15%",
-        end: "center center",
-        scrub: true,
-      },
-    });
-  });
-  return (
-    <>
-      <section className="about z-[9999] horizonal-scroll_section h-[100vh] w-[100vw] bg-[#181818] flex flex-col items-center justify-start  gap-6 pt-[4rem]">
-        <span className="w-[28rem]  flex justify-start  flex-col pl-8">
-          <span className="flex flex-col justify-center items-start z-10 mt-[3rem] ml-5">
-            <p className="text-white font-Cascadia text-[28px]">
-              Hello,
-              <br />
-              My self
-            </p>
-          </span>
-
-          <span className="flex items-center justify-start mt-6">
+export default function CurleyBraces({children} : {children: string}){
+    return(
+        <>
+        <span className="z-10 mt-6 flex items-center justify-start">
             <svg
               width="19"
               height="45"
@@ -48,9 +17,9 @@ export default function About() {
             </svg>
             <h1
               id="name"
-              className="name font-Poppins font-[800] text-[1.9rem] leading-[2.8rem] bg-clip-text bg-gradient-to-b from-[#ffffff] to-[#ffffff] text-transparent text-nowrap"
+              className="name text-nowrap bg-gradient-to-b from-[#ffffff] to-[#ffffff] bg-clip-text font-Poppins text-[1.9rem] font-[800] leading-[2.8rem] text-transparent"
             >
-              ...
+              {children}
             </h1>
 
             <svg
@@ -67,30 +36,6 @@ export default function About() {
               />
             </svg>
           </span>
-        </span>
-        <div className="z-10">
-          <img src={Image} alt="Picture" className="size-52" />
-        </div>
-        <p >
-          I’m a student currently pursuing my bachlor's degree in Computer Science from LD College of
-          Engineering (LDCE), with a solid background in creating responsive and
-          efficient web applications. My expertise centers around the MERN
-          stack, and I’m skilled in developing applications that are both
-          high-performing and user-friendly.
-        </p>
-        {/* <ul>
-          <li>
-            <p className="text-white font-Cascadia text-[12px] max-w-[50ch]">
-              I am pursuing bachelors degree in computer science from{" "}
-              <strong>L.D. College of Engineering</strong>.
-            </p>
-          </li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul> */}
-      </section>
-    </>
-  );
+        </>
+    )
 }

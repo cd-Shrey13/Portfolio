@@ -10,12 +10,18 @@ export default function Navbar({ className }: navProps) {
     <>
       <nav
         className={twMerge(
-          "flex h-[10vh] w-full items-center justify-between bg-[var(--color-black-background)] px-4",
+          " flex h-[10vh] w-full items-center justify-between bg-[rgba(11,11,11,.25)] px-4 md:px-8 ",
           className,
         )}
       >
+         <span className="hidden lg:block">
+          <a href="mailto:shreyprajapati13@gmail.com" title="Send Mail" rel="noreferrer">
+            <img src={MailLogo} alt="Mail" className=" md:size-16" />
+          </a>
+        </span>
+
         <div className="flex items-center justify-center">
-          <img src={NameLogo} alt="Logo" className=" md:h-12"/>
+          <img src={NameLogo} alt="Logo" className=" md:h-8" />
         </div>
 
         <span>
@@ -23,7 +29,7 @@ export default function Navbar({ className }: navProps) {
             <img src={MailLogo} alt="Mail" className=" md:size-16" />
           </a>
         </span>
-        
+
       </nav>
     </>
   );
