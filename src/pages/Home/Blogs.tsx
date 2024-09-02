@@ -6,7 +6,7 @@ export default function Blogs() {
       <section className="lg:mb-36 animate bg-[var(--color-black-background) mt-8 w-full p-4 md:mt-12 md:px-8 lg:flex items-center justify-center">
         <div className="flex flex-col items-center justify-center gap-4">
           <span className="flex w-full items-center justify-between">
-            <h1 className="name bg-gradient-to-b from-[#ffffff] to-[#ffffff] bg-clip-text font-Poppins text-2xl font-[800] text-transparent md:text-5xl md:md:leading-[5.5rem]">
+            <h1 className="lg:font-[700] name bg-gradient-to-b from-[#ffffff] to-[#ffffff] bg-clip-text font-Poppins text-2xl font-[800] text-transparent md:text-5xl md:md:leading-[5.5rem]">
               Blogs
             </h1>
 

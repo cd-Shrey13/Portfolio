@@ -1,7 +1,9 @@
-export default function CurleyBraces({children} : {children: string}){
+import { twMerge } from "tailwind-merge";
+
+export default function CurleyBraces({children, className} : {children: string, className?: string}){
     return(
         <>
-        <span className="z-10 mt-6 flex items-center justify-start">
+        <span className={twMerge("z-10 mt-6 flex items-center justify-start",className)}>
             <svg
               width="19"
               height="45"

@@ -1,25 +1,30 @@
+import arrowImage from "../../assets/Arrow 1.svg";
 import Button from "../../components/Button";
 import tileMasterMockUpImage from "../../assets/Group 16.png";
-import quickBiteMockupImage from '../../assets/QuickbytesMockup.png'
+import quickBiteMockupImage from "../../assets/QuickbytesMockup.png";
+import CurleyBraces from "../../components/CurleyBraces";
 
 export default function Projects() {
-  
+
+
   return (
     <>
-      <section className="animate bg-[var(--color-black-background) mt-8 w-full items-center justify-center p-4 md:mt-12 md:px-8 lg:mb-36 lg:flex">
-        <div className="flex flex-col items-center justify-center gap-4">
-          <span className="flex w-full items-center justify-between">
-            <h1 className="name bg-gradient-to-b from-[#ffffff] to-[#ffffff] bg-clip-text font-Poppins text-2xl font-[800] text-transparent md:text-5xl md:md:leading-[5.5rem]">
+      <section className="animate mt-8 w-full items-center justify-center bg-[var(--color-black-background)] p-4 md:mt-12 md:px-8 lg:mb-36 lg:flex">
+        <div className="flex flex-col items-center justify-center gap-4 rounded-xl p-4 lg:gap-6">
+          <div className="flex w-full items-center justify-between">
+            <h1 className="name bg-gradient-to-b from-[#ffffff] to-[#ffffff] bg-clip-text font-Poppins text-2xl font-[800] text-transparent md:text-5xl md:md:leading-[5.5rem] lg:font-[600]">
               Projects
             </h1>
+            <CurleyBraces className="-ml-8 mt-0 hidden">Projects</CurleyBraces>
 
-            <Button>View All</Button>
-          </span>
+            <Button className="">View All</Button>
+          </div>
 
           <span className="horizontal_wraper item-center flex w-full justify-center">
             <span className="horizontal_container grid w-full grid-flow-col grid-rows-1 gap-4 overflow-x-scroll md:grid-cols-2 md:grid-rows-2 md:gap-8 lg:grid-cols-3 lg:grid-rows-1">
-              <Card image={tileMasterMockUpImage} title='Tile Master Game'/>
-              <Card image={quickBiteMockupImage} title='QuickBite'/>
+              <Card id="1" image={tileMasterMockUpImage} title="Tile Master Game" / >
+              <Card image={quickBiteMockupImage} title="QuickBite" />
+              <Card image={tileMasterMockUpImage} title="Tile Master Game" />
             </span>
           </span>
         </div>
@@ -28,21 +33,38 @@ export default function Projects() {
   );
 }
 
-function Card({image, title, url}:{image:string, title:string, url?:string}) {
+function Card({
+  image,
+  title,
+  url,
+  
+}: {
+  image: string;
+  title: string;
+  url?: string;
+  id?: string;
+}) {
   return (
     <>
-      <div className="horizontal_card flex h-[24rem] w-[92vw] flex-col gap-4 rounded-[12px] bg-[var(--color-black-foreground)] p-4 md:w-full lg:w-[300px]">
-        <div className="fit- flex h-56 items-center justify-center overflow-hidden rounded-xl">
+      <div className="card horizontal_card flex   justify-between w-[80vw] flex-col gap-4 rounded-[12px] border-[.5px] border-solid border-[#c9c9c9] p-4 md:w-full lg:w-[300px] min-h-[20rem] ">
+        <div className="fit- flex items-center justify-center overflow-hidden rounded-xl">
           <img
             src={image}
             alt="Image"
-            className=" transition-transform duration-700 hover:scale-[1.2] hover:blur-[1px] "
+            className="transition-transform duration-700 hover:scale-[1.2] hover:blur-[1px]"
           />
         </div>
-        <span className="flex">
-          <h1 className="flex font-Poppins text-xl font-bold text-white">
-            {title}{url}
-          </h1>
+        <span className="flex items-center justify-between">
+          <span>
+            <h1 className="flex font-Poppins text-xl font-bold text-white">
+              {title}
+              {url}
+            </h1>
+            <p className="text-[#c9c9c9]">Website</p>
+          </span>
+          <span className="flex items-center justify-center rounded-full border-2 border-solid border-[#c9c9c9] p-2">
+            <img src={arrowImage} alt="image" />
+          </span>
         </span>
       </div>
     </>
