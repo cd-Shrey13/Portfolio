@@ -1,5 +1,5 @@
 import CurleyBraces from "../../components/CurleyBraces";
-import Techstack from "./Techstack";
+import Techstack from "../../components/Techstack";
 
 export default function About() {
   return (

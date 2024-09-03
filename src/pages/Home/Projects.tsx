@@ -1,12 +1,12 @@
-import arrowImage from "../../assets/Arrow 1.svg";
 import Button from "../../components/Button";
-import tileMasterMockUpImage from "../../assets/Group 16.png";
-import quickBiteMockupImage from "../../assets/QuickbytesMockup.png";
 import CurleyBraces from "../../components/CurleyBraces";
+import {
+  arrowImage,
+  tileMasterMockUpImage,
+  quickBiteMockupImage,
+} from "../../assets/asset";
 
 export default function Projects() {
-
-
   return (
     <>
       <section className="animate mt-8 w-full items-center justify-center bg-[var(--color-black-background)] p-4 md:mt-12 md:px-8 lg:mb-36 lg:flex">
@@ -22,7 +22,11 @@ export default function Projects() {
 
           <span className="horizontal_wraper item-center flex w-full justify-center">
             <span className="horizontal_container grid w-full grid-flow-col grid-rows-1 gap-4 overflow-x-scroll md:grid-cols-2 md:grid-rows-2 md:gap-8 lg:grid-cols-3 lg:grid-rows-1">
-              <Card id="1" image={tileMasterMockUpImage} title="Tile Master Game" / >
+              <Card
+                id="1"
+                image={tileMasterMockUpImage}
+                title="Tile Master Game"
+              />
               <Card image={quickBiteMockupImage} title="QuickBite" />
               <Card image={tileMasterMockUpImage} title="Tile Master Game" />
             </span>
@@ -37,7 +41,6 @@ function Card({
   image,
   title,
   url,
-  
 }: {
   image: string;
   title: string;
@@ -46,7 +49,7 @@ function Card({
 }) {
   return (
     <>
-      <div className="card horizontal_card flex   justify-between w-[80vw] flex-col gap-4 rounded-[12px] border-[.5px] border-solid border-[#c9c9c9] p-4 md:w-full lg:w-[300px] min-h-[20rem] ">
+      <div className="card horizontal_card flex min-h-[20rem] w-[80vw] flex-col justify-between gap-4 rounded-[12px] border-[.5px] border-solid border-[#c9c9c9] p-4 md:w-full lg:w-[300px]">
         <div className="fit- flex items-center justify-center overflow-hidden rounded-xl">
           <img
             src={image}

@@ -1,11 +1,11 @@
-import NameLogo from "../assets/name.svg";
-import MailLogo from "../assets/Mail.svg";
 import { twMerge } from "tailwind-merge";
+import  { nameLogo, mailLogo } from '../assets/asset.ts';
 
 type navProps = {
   className?: string;
 };
 export default function Navbar({ className }: navProps) {
+  
   return (
     <>
       <nav
@@ -14,7 +14,7 @@ export default function Navbar({ className }: navProps) {
           className,
         )}
       >
-        <span className="hidden  lg:block bg-">
+        <span className="bg- hidden lg:block">
           <a
             href="https://www.linkedin.com/in/shreyp13"
             title="LinkedIn"
@@ -38,7 +38,7 @@ export default function Navbar({ className }: navProps) {
         </span>
 
         <div className="flex items-center justify-center">
-          <img src={NameLogo} alt="Logo" className="md:h-6" />
+          <img src={nameLogo} alt="Logo" className="md:h-6" />
         </div>
 
         <span>
@@ -47,7 +47,7 @@ export default function Navbar({ className }: navProps) {
             title="Send Mail"
             rel="noreferrer"
           >
-            <img src={MailLogo} alt="Mail" className="md:size-16 lg:size-12" />
+            <img src={mailLogo} alt="Mail" className="md:size-16 lg:size-12" />
           </a>
         </span>
       </nav>
