@@ -9,6 +9,9 @@ import mailLogo from "../assets/svg/Mail.svg";
 import arrowImage from "../assets/svg/Arrow 1.svg";
 import tileMasterMockUpImage from "../assets/png/Group 16.png";
 import quickBiteMockupImage from "../assets/png/QuickbytesMockup.png";
+import picture from "../assets/png/profile-pic (2).png";
+import frontendIllustration from "../assets/svg/Developer activity-bro.svg";
+import backendIllustration from "../assets/svg/Cloud hosting-pana.svg";
 
 export {
     reactIcon,
@@ -21,5 +24,8 @@ export {
     mailLogo,
     arrowImage,
     tileMasterMockUpImage,
-    quickBiteMockupImage
+    quickBiteMockupImage,
+    picture,
+    frontendIllustration,
+    backendIllustration
 }

@@ -5,6 +5,8 @@
 :root{
     --color-black-background: #0b0b0b;
     --color-black-foreground: #201e1e;
+    --color-blue-foreground: #2a8aff;
+    --color-blue-dull: #3c7ecf;
 }
 
 *{
