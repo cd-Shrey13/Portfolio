@@ -4,15 +4,16 @@ import Projects from "./Projects";
 import Footer from "../../components/Footer";
 import About from "./About";
 
+
 function Index() {
   return (
     <>
       <header className="bg- sticky left-0 top-0 z-[999] items-center justify-between backdrop-blur-md lg:flex lg:flex-col">
         <Navbar />
       </header>
-      <main>
+      <main className="flex flex-col lg:gap-36 lg:mt-36 lg:mb-24">
         <Hero />
-        <About />
+       <About />
         <Projects />
       </main>
       <footer className="justify-center lg:mb-4 lg:flex">

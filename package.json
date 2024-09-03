@@ -11,13 +11,20 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.1",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@studio-freight/react-lenis": "^0.0.47",
+    "class-variance-authority": "^0.7.0",
+    "classnames": "^2.5.1",
+    "clsx": "^2.1.1",
     "gsap": "^3.12.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "tailwind-merge": "^2.5.2"
+    "tailwind-merge": "^2.5.2",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
+    "@types/node": "^22.5.2",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
