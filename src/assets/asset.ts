@@ -12,6 +12,8 @@ import quickBiteMockupImage from "../assets/png/QuickbytesMockup.png";
 import picture from "../assets/png/profile-pic (2).png";
 import frontendIllustration from "../assets/svg/Developer activity-bro.svg";
 import backendIllustration from "../assets/svg/Cloud hosting-pana.svg";
+import netflixMockupIllustration from '../assets/png/netflixMockupImage.png'
+import weatherAppMockup from '../assets/png/Weather (2).png'
 
 export {
     reactIcon,
@@ -27,5 +29,7 @@ export {
     quickBiteMockupImage,
     picture,
     frontendIllustration,
-    backendIllustration
+    backendIllustration,
+    netflixMockupIllustration,
+    weatherAppMockup
 }
