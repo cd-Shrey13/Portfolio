@@ -1,10 +1,11 @@
 import CurleyBraces from "../../components/CurleyBraces";
 import Techstack from "../../components/Techstack";
 
-export default function About() {
+export default function About(){
+
   return (
     <>
-      <section className="flex items-center justify-center w-full flex-col gap-8">
+      <section className="about flex items-center justify-center w-full flex-col gap-8">
         
           
         
@@ -12,7 +13,7 @@ export default function About() {
           <CurleyBraces>
             About
           </CurleyBraces>
-          <article className="space-y-4 w-[100ch]">
+          <article className="about_animate space-y-4 w-[100ch]">
             <p className="max-w-55ch w-full text-center font-Cascadia text-[12px] text-white md:text-lg">
               I'm a Full Stack Web Developer building the Front-end of Websites
               and Web Applications that leads to the success of the overall

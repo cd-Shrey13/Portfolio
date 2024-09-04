@@ -2,10 +2,10 @@ import resumePdf from "../assets/Resume_Shrey_Prajapati.pdf";
 export default function Footer() {
   return (
     <>
-      <div className="mt-8 flex w-full max-w-[1024px] flex-col items-start justify-center gap-4 bg-[var(--color-black-background)] p-8 text-white md:gap-8 md:p-8 lg:mt-0 lg:flex-row lg:justify-evenly">
-        <span className="flex-col items-center justify-center lg:flex">
+      <div className=" flex w-full max-w-[1024px] flex-col items-start justify-center gap-4 bg-[var(--color-black-background)] p-8  md:gap-8 md:p-8 lg:mt-0 lg:flex-row lg:justify-between ">
+        <span className="flex-col items-center justify-center lg:flex ">
           <p className="tracking-widest md:text-xl">💌CONTACT ME</p>
-          <p className="max-w-60ch w-full text-center font-Cascadia text-[12px] text-white md:text-lg">
+          <p className="max-w-60ch w-full text-center font-Cascadia text-[12px]  md:text-lg">
             <a
               href="mailto:shreyprajapati13@gmail.com"
               rel="noreferrer"
@@ -15,9 +15,9 @@ export default function Footer() {
             </a>
           </p>
         </span>
-        <span className="flex-col items-center justify-center lg:flex">
+        <span className="relative lg:-left-10 flex-col items-center justify-center lg:flex ">
           <p className="tracking-widest md:text-xl">LET'S CONNECT🫱🏼‍🫲🏼</p>
-          <p className="max-w-60ch flex w-full items-center justify-start gap-4 text-center font-Cascadia text-[12px] text-white md:text-lg">
+          <p className="max-w-60ch flex w-full items-center justify-start gap-4 text-center font-Cascadia text-[12px]  md:text-lg">
             <a href={resumePdf} target="_blank" rel="noreferrer">
               Resume
             </a>
@@ -48,9 +48,9 @@ export default function Footer() {
           </p>
         </span>
 
-        <span className="flex-col items-center justify-center lg:flex">
+        <span className="relative lg:-left-16 flex-col items-center justify-center lg:flex ">
           <p className="tracking-widest md:text-xl">MADE WITH ❤️</p>
-          <p className="max-w-60ch w-full text-center font-Cascadia text-[12px] text-white md:text-lg">
+          <p className="max-w-60ch w-full text-center font-Cascadia text-[12px]  md:text-lg">
             By Shrey Prajapati
           </p>
         </span>
