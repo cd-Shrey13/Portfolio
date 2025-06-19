@@ -10,7 +10,7 @@ import {
 export default function Techstack() {
   return (
     <>
-      <section className="about_animate mt-8 flex w-full items-center justify-evenly bg-[var(--color-black-background)] md:mt-4 ">
+      <section className="about_animate mt-8 flex w-full items-center justify-evenly bg-(--color-black-background) md:mt-4 ">
         <div className="grid-row-2 grid w-full grid-cols-4 items-center justify-center gap-8 px-6 py-4 lg:flex">
           <span>
             <img

@@ -16,7 +16,7 @@ export default function Button({
       <button
         type="button"
         className={twMerge(
-          "rounded-[8px] bg-[var(--color-blue-foreground)] px-4 py-2 font-Poppins text-xs font-[600] text-white transition-all hover:bg-[var(--color-blue-dull)] md:px-6 md:py-3 md:text-base",
+          "rounded-[8px] bg-(--color-blue-foreground) px-4 py-2 font-Poppins text-xs font-semibold text-white transition-all hover:bg-(--color-blue-dull) md:px-6 md:py-3 md:text-base",
           className,
         )}
         onClick={onClickHandler}

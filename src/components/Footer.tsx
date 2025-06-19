@@ -2,7 +2,7 @@ import resumePdf from "../assets/Resume_Shrey_Prajapati.pdf";
 export default function Footer() {
   return (
     <>
-      <div className=" flex w-full max-w-[1024px] flex-col items-start justify-center gap-4 bg-[var(--color-black-background)] p-8  md:gap-8 md:p-8 lg:mt-0 lg:flex-row lg:justify-between ">
+      <div className=" flex w-full max-w-[1024px] flex-col items-start justify-center gap-4 bg-(--color-black-background) p-8  md:gap-8 md:p-8 lg:mt-0 lg:flex-row lg:justify-between ">
         <span className="flex-col items-center justify-center lg:flex ">
           <p className="tracking-widest md:text-xl">💌CONTACT ME</p>
           <p className="max-w-60ch w-full text-center font-Cascadia text-[12px]  md:text-lg">

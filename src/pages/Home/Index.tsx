@@ -8,7 +8,7 @@ import About from "./About";
 function Index() {
   return (
     <>
-      <header className="bg- sticky left-0 top-0 z-[999] items-center justify-between backdrop-blur-md lg:flex lg:flex-col">
+      <header className="bg- sticky left-0 top-0 z-999 items-center justify-between backdrop-blur-md lg:flex lg:flex-col">
         <Navbar />
       </header>
       <main className="flex flex-col lg:gap-36 lg:mt-36 lg:mb-24">

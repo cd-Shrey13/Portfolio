@@ -1,6 +1,32 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+  --background-image-background-texture: url('./src/assets/Android Large - 3.png');
+
+  --font-Poppins: Poppins, sans-serif;
+  --font-Cascadia: Cascadia Code, sans-serif;
+  --font-Boska: Boska, serif;
+  --font-Roboto: Roboto, sans-serif;
+  --font-Inter: Inter, sans-serif;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
 
 :root{
     --color-black-background: #0b0b0b;

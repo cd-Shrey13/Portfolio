@@ -51,7 +51,7 @@ export default function Navbar({ className }: navProps) {
           </a>
         </span>
       </nav>
-      <span className="h-1 w-[80%] lg:border-b-[1px] lg:border-solid lg:border-[#d9d9d9]"></span>
+      <span className="h-1 w-[80%] lg:border-b lg:border-solid lg:border-[#d9d9d9]"></span>
     </>
   );
 }

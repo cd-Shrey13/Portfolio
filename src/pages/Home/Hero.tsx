@@ -27,7 +27,7 @@ export default function Hero() {
 
   return (
     <>
-      <section className="animate_section mt-8 w-full bg-[var(--color-black-background)] md:mt-0 ">
+      <section className="animate_section mt-8 w-full bg-(--color-black-background) md:mt-0 ">
         <div className="auto-rows-[minmax(1fr, 2fr)] grid grid-cols-2 gap-4 bg-transparent p-4 md:gap-8 md:p-8 lg:flex lg:w-full lg:flex-col">
           <span className="bottom-16 hidden h-full w-full flex-col items-center justify-center gap-2 bg-transparent lg:flex">
             <img
@@ -36,13 +36,13 @@ export default function Hero() {
               alt="Pictue of Me!"
             />
 
-            <span className="absolute top-auto -z-10 hidden size-[35rem] rounded-full bg-[rgba(77,74,74,0.27)] blur-[300px] lg:block"></span>
+            <span className="absolute top-auto -z-10 hidden size-140 rounded-full bg-[rgba(77,74,74,0.27)] blur-[300px] lg:block"></span>
 
             <p className="hero_animate hidden font-Roboto text-3xl font-[50] text-white lg:block">
               Hello, I'm Shrey👋🏻
             </p>
 
-            <h1 className="hero_animate hidden text-nowrap bg-gradient-to-b from-[#ffffff] to-[#999999] bg-clip-text font-Poppins text-5xl font-[700] text-transparent lg:block">
+            <h1 className="hero_animate hidden text-nowrap bg-linear-to-b from-[#ffffff] to-[#999999] bg-clip-text font-Poppins text-5xl font-bold text-transparent lg:block">
               Full Stack Web Developer
             </h1>
 
@@ -75,7 +75,7 @@ export default function Hero() {
                   : "",
               )}
             >
-              <h1 className="font-Poppins text-2xl font-[800] md:text-5xl md:leading-[3.5rem]">
+              <h1 className="font-Poppins text-2xl font-extrabold md:text-5xl md:leading-14">
                 Shrey Prajapati
               </h1>
               <p className="w-full font-Cascadia text-xs md:text-xl">
@@ -103,7 +103,7 @@ export default function Hero() {
               <Button onClick={() => {
                 setAccordaintVisibility((prev) => !prev)
               } }
-                className="mt-2 bg-[var(--color-blue-foreground)]"
+                className="mt-2 bg-(--color-blue-foreground)"
               >
                 {accordaintVisibility ? "Read Less" : "Read More"}
               </Button>
