@@ -1,7 +1,7 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @theme {
-  --background-image-background-texture: url('./src/assets/Android Large - 3.png');
+  --background-image-background-texture: url("./src/assets/Android Large - 3.png");
 
   --font-Poppins: Poppins, sans-serif;
   --font-Cascadia: Cascadia Code, sans-serif;
@@ -28,24 +28,31 @@
   }
 }
 
-:root{
-    --color-black-background: #0b0b0b;
-    --color-black-foreground: #201e1e;
-    --color-blue-foreground: #2a8aff;
-    --color-blue-dull: #3c7ecf;
-    --color-white: #ffffff;
+:root {
+  --color-background-primary: #0f0c29;
+  --color-background-secondary: ;
+
+  --color-font-primary: #ffffff;
+  --color-font-secondary: ;
+
+  --color-button-primary: #0f0c29;
+  --color-button-hover: oklch(82.7% 0.119 306.383);
+
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html,
+body {
+  height: 100%;
+  width: 100%;
+  /* background-color: var(--color-black-background);
+  /* Lawrencium Gradient */
+background: #0f0c29, #302b63, #24243e;
+background: -webkit-linear-gradient(90deg, #0f0c29, #302b63, #24243e);
+background: linear-gradient(90deg, #0f0c29, #302b63, #24243e);
+  color: var(--color-white);
+  scroll-behavior: smooth;
 }
 
-html, body{
-    height: 100%;
-    width: 100%;
-    background-color: var(--color-black-background); 
-    color: var(--color-white);
-    scroll-behavior: smooth;
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
 }

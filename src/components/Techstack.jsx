@@ -3,14 +3,14 @@ import {
   expressIcon,
   reactIcon,
   nodeIcon,
-  typescriptIcon,
+  javascriptIcon,
   tailwindIcon,
 } from "../assets/asset";
 
 export default function Techstack() {
   return (
     <>
-      <section className="about_animate mt-8 flex w-full items-center justify-evenly bg-(--color-black-background) md:mt-4 ">
+      <section className="about_animate mt-8 flex w-full items-center justify-evenly  md:mt-4 ">
         <div className="grid-row-2 grid w-full grid-cols-4 items-center justify-center gap-8 px-6 py-4 lg:flex">
           <span>
             <img
@@ -51,9 +51,9 @@ export default function Techstack() {
           <span className="col-start-2">
             <img
               className="size-16 md:size-24 lg:size-16"
-              src={typescriptIcon}
+              src={javascriptIcon}
               alt="Image"
-              title="TypeScript"
+              title="JavaScript"
             />
           </span>
 

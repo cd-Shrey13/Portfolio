@@ -2,7 +2,7 @@ import resumePdf from "../assets/Resume_Shrey_Prajapati.pdf";
 export default function Footer() {
   return (
     <>
-      <div className=" flex w-full max-w-[1024px] flex-col items-start justify-center gap-4 bg-(--color-black-background) p-8  md:gap-8 md:p-8 lg:mt-0 lg:flex-row lg:justify-between ">
+      <div className=" flex w-full  flex-col items-start justify-center gap-4 p-8  md:gap-8 md:p-8 lg:w-[1024px] lg:mt-0 lg:flex-row lg: rounded-2xl lg:mb-4 lg:justify-between bg-(--color-background-primary)">
         <span className="flex-col items-center justify-center lg:flex ">
           <p className="tracking-widest md:text-xl">💌CONTACT ME</p>
           <p className="max-w-60ch w-full text-center font-Cascadia text-[12px]  md:text-lg">
@@ -20,14 +20,6 @@ export default function Footer() {
           <p className="max-w-60ch flex w-full items-center justify-start gap-4 text-center font-Cascadia text-[12px]  md:text-lg">
             <a href={resumePdf} target="_blank" rel="noreferrer">
               Resume
-            </a>
-            |
-            <a
-              href="https://www.linkedin.com/in/shreyp13"
-              target="_blank"
-              rel="noreferrer"
-            >
-              LinkdIn
             </a>
             |
             <a

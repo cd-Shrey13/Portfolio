@@ -2,14 +2,14 @@ import {
   picture,
   frontendIllustration,
   backendIllustration,
-} from "../../assets/asset";
+} from "../../assets/asset.js";
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
-// import Button from "../../components/Button";
+import Button from "../../components/Button";
 import Card from "../../components/Card";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { Button } from "@/components/ui/button"
+// import { Button } from "@/components/ui/button"
 
 
 
@@ -27,26 +27,26 @@ export default function Hero() {
 
   return (
     <>
-      <section className="animate_section mt-8 w-full bg-(--color-black-background) md:mt-0 ">
+      <section className="animate_section mt-8 w-full md:mt-0 ">
         <div className="auto-rows-[minmax(1fr, 2fr)] grid grid-cols-2 gap-4 bg-transparent p-4 md:gap-8 md:p-8 lg:flex lg:w-full lg:flex-col">
           <span className="bottom-16 hidden h-full w-full flex-col items-center justify-center gap-2 bg-transparent lg:flex">
             <img
-              className="hero_animate size-28 md:size-52 lg:size-64"
+              className="hero_animate size-28 md:size-52 lg:size-64 object-cover rounded-full bg-center"
               src={picture}
               alt="Pictue of Me!"
             />
 
             <span className="absolute top-auto -z-10 hidden size-140 rounded-full bg-[rgba(77,74,74,0.27)] blur-[300px] lg:block"></span>
 
-            <p className="hero_animate hidden font-Roboto text-3xl font-[50] text-white lg:block">
+            <p className="hero_animate hidden font-Poppins text-3xl text-(--color-font-primary) lg:block font-bold text-shadow-2xs">
               Hello, I'm Shrey👋🏻
             </p>
 
-            <h1 className="hero_animate hidden text-nowrap bg-linear-to-b from-[#ffffff] to-[#999999] bg-clip-text font-Poppins text-5xl font-bold text-transparent lg:block">
+            <h1 className="hero_animate hidden text-nowrap  text-(--color-font-primary) bg-clip-text font-Poppins text-5xl  text-shadow-lg font-bold  lg:block">
               Full Stack Web Developer
             </h1>
 
-            <p className="hero_animate max-w-55ch hidden w-full text-center font-Cascadia text-sm text-[#999999] lg:block">
+            <p className="hero_animate max-w-55ch hidden w-full text-center font-Cascadia font-bold text-sm text-(--color-font-primary) lg:block">
               I code Beautifully simple things and I love what I do.
               <br />
               📍🇮🇳
@@ -61,7 +61,7 @@ export default function Hero() {
           >
             <span className="relative flex w-[40%] items-center justify-center">
               <img
-                className="size-28 md:size-52 lg:size-64"
+                className="size-28 md:size-52 lg:size-64 rounded-full"
                 src={picture}
                 alt="Pictue of Me!"
               />
@@ -85,7 +85,7 @@ export default function Hero() {
 
               {accordaintVisibility && (
                 <article className="space-y-4">
-                  <p className="max-w-60ch w-full text-center font-Cascadia text-[12px] text-[#999999] md:text-lg">
+                  <p className="max-w-60ch w-full text-center font-Cascadia text-[12px] text-(--color-font-primary) md:text-lg">
                     I'm a Full Stack Web Developer building the Front-end of
                     Websites and Web Applications that leads to the success of
                     the overall product. <br />
@@ -103,7 +103,7 @@ export default function Hero() {
               <Button onClick={() => {
                 setAccordaintVisibility((prev) => !prev)
               } }
-                className="mt-2 bg-(--color-blue-foreground)"
+                className="mt-2 bg-(--color-button-primary) border-1 border-purple-200"
               >
                 {accordaintVisibility ? "Read Less" : "Read More"}
               </Button>
