@@ -100,13 +100,14 @@ export default function Hero() {
                   </p>
                 </article>
               )}
-              <Button onClick={() => {
+              <button onClick={() => {
+            
                 setAccordaintVisibility((prev) => !prev)
               } }
-                className="mt-2 bg-(--color-button-primary) border-1 border-purple-200"
+                className="mt-2 bg-(--color-button-primary) border-1 border-purple-200 font-Poppins rounded-[8px] px-4 py-2 text-xs font-semibold text-white transition-all hover:bg-(--color-button-primary) md:px-6 md:py-3 md:text-base"
               >
                 {accordaintVisibility ? "Read Less" : "Read More"}
-              </Button>
+              </button>
             </div>
           </Card>
 

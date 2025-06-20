@@ -10,7 +10,7 @@ const projectDetails = [
   {
     title: "Tile Maste Game",
     image: tileMasterMockUpImage,
-    url: "https://cd-shrey13.github.io/Tile-Master/",
+    url: "https://tilemaster.vercel.app/",
   },
   {
     title: "Landing-page clone",
@@ -36,7 +36,7 @@ export default function Projects() {
           </div>
 
           <span className="horizontal_wraper item-center hide-scrollbar flex w-full justify-center">
-            <span className="horizontal_container grid w-full grid-flow-col grid-rows-1 gap-4 overflow-x-hidden py-2 md:grid-cols-2 md:grid-rows-2 md:gap-8">
+            <span className="horizontal_container grid grid-flow-col grid-rows-3 gap-4 overflow-x-hidden py-2 md:grid-cols-2 md:grid-rows-2 md:gap-8">
               {projectDetails.map(({ title, image, url }, index) => {
                 return (
                   <Card key={index} image={image} title={title} url={url} />
