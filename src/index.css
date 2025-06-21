@@ -10,14 +10,6 @@
   --font-Inter: Inter, sans-serif;
 }
 
-/*
-  The default border color has changed to `currentcolor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
 @layer base {
   *,
   ::after,
@@ -25,31 +17,91 @@
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentcolor);
+    transition: all 0.3s ease-in-out;
   }
+
 }
 
 :root {
+  /* default */
   --color-background-primary: #0f0c29;
-  --color-background-secondary: ;
+  --color-background-mid: #302b63;
+  --color-background-secondary: #0f0c29;
 
   --color-font-primary: #ffffff;
   --color-font-secondary: ;
 
-  --color-button-primary: #0f0c29;
-  --color-button-hover: oklch(82.7% 0.119 306.383);
+  --color-button-primary: #241f57;
+  --color-button-hover: oklch(43.482% 0.08354 306.699);
+  --color-button-border: #68638c;
 
+  --color-card-primary: #0f0c29;
+  --color-card-border: #282637;
+
+
+/* black */
+    /* --color-background-primary: #232526;
+  --color-background-mid: #302b63;
+  --color-background-secondary: #414345;
+
+  --color-font-primary: #ffffff;
+  --color-font-secondary: ;
+
+  --color-button-primary: #222529;
+  --color-button-hover: #454b52;
+  --color-button-border: #68676b;
+
+  --color-card-primary: #1c1d1e;
+  --color-card-border: #68676b; */
+
+  /* Purple */
+      /* --color-background-primary: #6441A5;
+  --color-background-mid: #302b63;
+  --color-background-secondary: #2a0845;
+
+  --color-font-primary: #ffffff;
+  --color-font-secondary: ;
+
+  --color-button-primary: #9261ec;
+  --color-button-hover: #c8aff7;
+  --color-button-border: #7149bc;
+
+  --color-card-primary: #251233;
+  --color-card-border: rgb(139, 114, 214); */
+
+  /* Beige  */
+      /* --color-background-primary: #f4f1de;
+  --color-background-mid: #302b63;
+  --color-background-secondary: #f4f1de;
+
+  --color-font-primary: #000000;
+  --color-font-secondary: ;
+
+  --color-button-primary: #9261ec;
+  --color-button-hover: #c8aff7;
+  --color-button-border: #7149bc;
+
+  --color-card-primary: #e07a5f;
+  --color-card-border: rgb(139, 114, 214); */
 }
 
 html,
 body {
   height: 100%;
   width: 100%;
-  /* background-color: var(--color-black-background);
-  /* Lawrencium Gradient */
-background: #0f0c29, #302b63, #24243e;
-background: -webkit-linear-gradient(90deg, #0f0c29, #302b63, #24243e);
-background: linear-gradient(90deg, #0f0c29, #302b63, #24243e);
-  color: var(--color-white);
+
+  /*Gradient */
+  background: var(--color-background-primary), var(--color-background-secondary);
+  background: -webkit-linear-gradient(
+    90deg,
+    var(--color-background-primary),
+    var(--color-background-secondary)
+  );
+  background: linear-gradient(
+    90deg,
+    var(--color-background-primary),
+    var(--color-background-secondary)
+  );
   scroll-behavior: smooth;
 }
 
