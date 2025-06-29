@@ -1,10 +1,11 @@
 import { twMerge } from "tailwind-merge";
 import { nameLogo, mailLogo } from "../assets/asset.js";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar({ className }) {
   const [themeSelectMenuVisible, setThemeSelectMenuVisible] = useState(false);
-  const colorVarients = ["Default","Black", "Purple"];
+  const colorVarients = ["Default", "Black", "Purple"];
   const themeVarients = {
     Default: {
       primaryBackground: "#0f0c29",
@@ -97,14 +98,16 @@ export default function Navbar({ className }) {
         )}
       >
         <div className="flex items-center justify-center">
-          <img src={nameLogo} alt="Logo" className="md:h-6" />
+          <Link to={"/"}>
+            <img src={nameLogo} alt="Logo" className="md:h-6" />
+          </Link>
         </div>
 
         <span className="flex items-center justify-center">
           <span
             className={
               themeSelectMenuVisible
-                ? "absolute mt-40 mr-48 flex flex-col gap-2 rounded-lg bg-[#2c2c2c] p-1 lg:mt-40 lg:mr-58 border-solid border-[1px] border-[#68676b]"
+                ? "absolute mt-40 mr-48 flex flex-col gap-2 rounded-lg border-[1px] border-solid border-[#68676b] bg-[#2c2c2c] p-1 lg:mt-40 lg:mr-58"
                 : "hidden"
             }
           >
@@ -112,7 +115,7 @@ export default function Navbar({ className }) {
               const selectedTheme = themeVarients[color];
               return (
                 <button
-                  className="flex items-center justify-between gap-3 rounded-md bg-[#2c2c2c] p-1 text-(--color-font-primary) active:bg-[#c9c9c9]"
+                  className="flex items-center justify-between gap-3 rounded-md bg-[#2c2c2c] p-1 text-(--color-font-primary) hover:cursor-pointer active:bg-[#c9c9c9]"
                   onClick={() => {
                     changeThemeColor(color);
                   }}
@@ -139,7 +142,7 @@ export default function Navbar({ className }) {
             })}
           </span>
           <button
-            className="mr-2 rounded-full border-solid bg-white p-3"
+            className="mr-2 rounded-full border-solid bg-white p-3 hover:cursor-pointer"
             onClick={() => {
               setThemeSelectMenuVisible((prev) => !prev);
             }}

@@ -3,18 +3,17 @@ import {
   frontendIllustration,
   backendIllustration,
 } from "../../assets/asset.js";
-import { useState } from "react";
-import { twMerge } from "tailwind-merge";
 import Card from "../../components/Card";
+import { redirect, useNavigate } from "react-router-dom";
 
 export default function Hero() {
-  const [accordaintVisibility, setAccordaintVisibility] = useState(false);
+  let navigate = useNavigate();
 
   return (
     <>
       <section className="animate_section mt-8 w-full md:mt-0">
-        <div className="auto-rows-[minmax(1fr, 2fr)] grid grid-cols-2 gap-4 bg-transparent p-4 md:gap-8 md:p-8 lg:flex lg:w-full lg:flex-col">
-          <span className="bottom-16 hidden h-full w-full flex-col items-center justify-center gap-2 bg-transparent lg:flex">
+        <div className="auto-rows-[minmax(1fr, 2fr)] grid grid-cols-2 gap-4 bg-transparent md:gap-8 lg:flex lg:w-full lg:flex-col">
+          <span className="bottom-12 hidden h-full w-full flex-col items-center justify-center gap-2 lg:flex">
             <img
               className="hero_animate size-28 rounded-full bg-center object-cover md:size-52 lg:size-64"
               src={picture}
@@ -23,26 +22,34 @@ export default function Hero() {
 
             <span className="absolute top-auto -z-10 hidden size-140 rounded-full bg-[rgba(77,74,74,0.27)] blur-[300px] lg:block"></span>
 
-            <p className="hero_animate font-Poppins hidden text-3xl font-bold text-(--color-font-primary) text-shadow-2xs lg:block">
-              Hello, I'm Shrey👋🏻
+            <p className="hero_animate font-Poppins hidden text-3xl font-bold text-(--color-font-primary) text-shadow-2xs lg:mt-4 lg:block">
+              Hello, I'm{" "}
+              <span className="rounded-sm border-[1px] border-amber-700 bg-(--color-font-highlight) px-[4px]">
+                Shrey
+              </span>
+              👋🏻
             </p>
 
             <h1 className="hero_animate font-Poppins hidden bg-clip-text text-5xl font-bold text-nowrap text-(--color-font-primary) text-shadow-lg lg:block">
               Full Stack Web Developer
             </h1>
 
-            <p className="hero_animate max-w-55ch font-sans hidden w-full text-center text-sm font-bold text-(--color-font-primary) lg:block">
+            <p className="hero_animate max-w-55ch hidden w-full text-center font-sans text-sm font-bold text-(--color-font-primary) lg:block">
               I code Beautifully simple things and I love what I do.
-              <br />
-              📍🇮🇳
             </p>
+            <a
+              href={"mailto:shreyprajapati13@gmail.com"}
+              target="_black"
+              className="font-Poppins mt-2 rounded-[8px] border-1 border-(--color-button-border) bg-(--color-button-primary) px-4 py-2 text-xs font-semibold text-(--color-font-primary) transition-all hover:cursor-pointer hover:bg-(--color-button-hover) md:px-6 md:py-3 md:text-base"
+            >
+              Contact Now
+            </a>
           </span>
 
           <Card
-            className={twMerge(
-              "col-span-2 flex w-full items-center justify-between gap-4 py-8 md:my-12 md:gap-8 lg:hidden",
-              accordaintVisibility ? "flex-col" : "",
-            )}
+            className={
+              "col-span-2 flex w-full items-center justify-between gap-4 py-8 md:my-12 md:gap-8 lg:hidden"
+            }
           >
             <span className="relative flex w-[40%] items-center justify-center">
               <img
@@ -53,45 +60,26 @@ export default function Hero() {
             </span>
 
             <div
-              className={twMerge(
-                "flex w-[60%] flex-col items-start justify-center gap-2 md:space-y-4",
-                accordaintVisibility
-                  ? "w-full items-center justify-evenly gap-4 text-center"
-                  : "",
-              )}
+              className={
+                "flex w-[60%] flex-col items-start justify-center gap-2 md:space-y-4"
+              }
             >
               <h1 className="font-Poppins text-2xl font-extrabold md:text-5xl md:leading-14">
-                Shrey Prajapati
+                <span className="rounded-sm border-[1px] border-amber-700 bg-(--color-font-highlight) px-[4px] text-shadow-xs">
+                  Shrey
+                </span>{" "}
+                Prajapati
               </h1>
-              <p className="font-sans w-full text-xs md:text-xl">
+              <p className="w-full font-sans text-xs md:text-xl">
                 Student at
                 <br className="md:hidden" /> L.D. College of Engineering
               </p>
 
-              {accordaintVisibility && (
-                <article className="space-y-4">
-                  <p className="max-w-60ch font-sans w-full text-center text-[12px] text-(--color-font-primary) md:text-lg">
-                    I'm a Full Stack Web Developer building the Front-end of
-                    Websites and Web Applications that leads to the success of
-                    the overall product. <br />
-                    Check out some of my work in the Projects section. I also
-                    like sharing content related to the stuff that I have
-                    learned in Web Development so it can help other people of
-                    the Dev Community. <br />
-                    Feel free to Connect.I'm open to Job opportunities where I
-                    can contribute, learn and grow. If you have a good
-                    opportunity that matches my skills and experience then don't
-                    hesitate to contact me.
-                  </p>
-                </article>
-              )}
               <button
-                onClick={() => {
-                  setAccordaintVisibility((prev) => !prev);
-                }}
+                onClick={() => navigate("/about")}
                 className="font-Poppins mt-2 rounded-[8px] border-1 border-(--color-button-border) bg-(--color-button-primary) px-4 py-2 text-xs font-semibold text-(--color-font-primary) transition-all hover:bg-(--color-button-hover) md:px-6 md:py-3 md:text-base"
               >
-                {accordaintVisibility ? "Read Less" : "Read More"}
+                Know More
               </button>
             </div>
           </Card>
@@ -106,7 +94,7 @@ export default function Hero() {
             </span>
 
             <span>
-              <p className="font-sans w-full text-center text-[12px] md:text-lg">
+              <p className="w-full text-center font-sans text-[12px] md:text-lg">
                 Frontend <br />
                 Web Development
               </p>
@@ -123,7 +111,7 @@ export default function Hero() {
             </span>
 
             <span>
-              <p className="font-sans w-full text-center text-[12px] md:text-lg">
+              <p className="w-full text-center font-sans text-[12px] md:text-lg">
                 Backend <br />
                 Web Development
               </p>

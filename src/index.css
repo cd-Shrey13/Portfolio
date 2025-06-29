@@ -30,12 +30,13 @@
 
   --color-font-primary: #ffffff;
   --color-font-secondary: ;
+  --color-font-highlight: #eba308;
 
   --color-button-primary: #241f57;
   --color-button-hover: oklch(43.482% 0.08354 306.699);
   --color-button-border: #68638c;
 
-  --color-card-primary: #0f0c29;
+  --color-card-primary: #231f43;
   --color-card-border: #282637;
 
 
