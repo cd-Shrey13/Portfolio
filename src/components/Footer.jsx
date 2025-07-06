@@ -2,10 +2,12 @@ import resumePdf from "../assets/Resume_Shrey_Prajapati.pdf";
 export default function Footer() {
   return (
     <>
-      <div className=" flex w-full  flex-col items-start justify-center gap-4 p-8  md:gap-8 md:p-8 lg:w-[1024px] lg:mt-0 lg:flex-row lg: rounded-2xl lg:mb-4 lg:justify-between bg-(--color-background-primary)">
-        <span className="flex-col items-center justify-center lg:flex ">
-          <p className="tracking-widest md:text-xl text-(--color-font-primary)">💌CONTACT ME</p>
-          <p className="max-w-60ch w-full text-center font-sans text-[12px] text-(--color-font-primary) md:text-lg">
+      <div className="flex w-full flex-col items-start justify-center gap-4 bg-(--color-background-secondary) p-8 md:w-11/12 md:gap-8 md:p-8 lg:w-[1024px] lg:flex-row lg:justify-between">
+        <span className="flex-col items-center justify-center lg:flex">
+          <p className="tracking-widest text-(--color-font-primary) md:text-xl">
+            💌CONTACT ME
+          </p>
+          <p className="max-w-60ch w-full text-center font-normal text-(--color-font-primary)">
             <a
               href="mailto:shreyprajapati13@gmail.com"
               rel="noreferrer"
@@ -15,9 +17,11 @@ export default function Footer() {
             </a>
           </p>
         </span>
-        <span className="relative lg:-left-10 flex-col items-center justify-center lg:flex ">
-          <p className="tracking-widest md:text-xl text-(--color-font-primary)">LET'S CONNECT🫱🏼‍🫲🏼</p>
-          <p className="max-w-60ch flex w-full items-center justify-start gap-4 text-center text-(--color-font-primary) font-sans text-[12px]  md:text-lg">
+        <span className="relative flex-col items-center justify-center lg:-left-10 lg:flex">
+          <p className="tracking-widest text-(--color-font-primary) md:text-xl">
+            LET'S CONNECT🫱🏼‍🫲🏼
+          </p>
+          <p className="max-w-60ch flex w-full items-center justify-start gap-4 text-center font-normal text-(--color-font-primary)">
             <a href={resumePdf} target="_blank" rel="noreferrer">
               Resume
             </a>
@@ -40,9 +44,12 @@ export default function Footer() {
           </p>
         </span>
 
-        <span className="relative lg:-left-16 flex-col items-center justify-center lg:flex ">
-          <p className="tracking-widest md:text-xl text-(--color-font-primary)">MADE WITH ❤️</p>
-          <p className="max-w-60ch w-full text-center font-sans text-[12px]  md:text-lg text-(--color-font-primary)">By Shrey Prajapati
+        <span className="relative flex-col items-center justify-center lg:-left-16 lg:flex">
+          <p className="tracking-widest text-(--color-font-primary) md:text-xl">
+            MADE WITH ❤️
+          </p>
+          <p className="max-w-60ch w-full text-center font-normal text-(--color-font-primary)">
+            By Shrey Prajapati
           </p>
         </span>
       </div>

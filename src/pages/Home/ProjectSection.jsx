@@ -1,68 +1,25 @@
 import Button from "../../components/Button.jsx";
 import Card from "../../components/ProjectCard.jsx";
-import {
-  tileMasterMockUpImage,
-  netflixMockupIllustration,
-  weatherAppMockup,
-  spaceshipGameMockupImage,
-  quickBiteMockupImage,
-} from "../../assets/asset.js";
 import { useNavigate } from "react-router-dom";
+import { projectDetails } from "../../utils/utils.js";
 
-const projectDetails = [
-  {
-    title: "Tile Maste Game",
-    image: tileMasterMockUpImage,
-    url: "https://tilemaster.vercel.app/",
-    tags: ["HTML", "CSS", "JavaScript"],
-  },
-  {
-    title: "Spaceship Game",
-    image: spaceshipGameMockupImage,
-    url: "https://spaceship-game-phi.vercel.app/",
-    tags: ["HTML", "CSS", "JavaScript"],
-  },
-  {
-    title: "QuickBite",
-    image: quickBiteMockupImage,
-    url: "https://quick-bite-henna-one.vercel.app/",
-    tags: ["React", "Tailwind CSS", "Node.js", "MongoDb"],
-  },
-  {
-    title: "Landing-page clone",
-    image: netflixMockupIllustration,
-    url: "https://cd-shrey13.github.io/Netflix-Landing-Page/",
-    tags: ["HTML", "CSS", "JavaScript"],
-  },
-  {
-    title: "Weather App",
-    image: weatherAppMockup,
-    url: "https://cd-shrey13.github.io/Weather-App/",
-    tags: ["HTML", "CSS", "JavaScript"],
-  },
-];
+
 export default function Projects() {
   let navigate = useNavigate();
 
   return (
     <>
-      <section className="project animate w-full items-center justify-center p-4 md:mt-12 md:px-8 lg:flex">
-        <div className="hide-scrollbar flex flex-col items-center justify-center gap-4 rounded-xl p-4 lg:gap-6">
-          <div className="project_animate flex w-full items-center justify-between lg:justify-center">
-            <h1 className="name font-Poppins text-2xl font-extrabold text-(--color-font-primary) md:text-5xl md:md:leading-22 lg:font-semibold">
+      <section className=" w-full py-8  md:px-4  flex items-center justify-center ">
+        <div className="w-10/12 flex items-center justify-center lg:gap-15 flex-col md:w-11/12">
+          <h2 className="mb-8 text-center text-4xl font-bold text-(--color-heading-primary) lg:text-5xl">
+            <span class="underline decoration-(--color-highlight) decoration-8 underline-offset-3">
               Projects
-            </h1>
-            <Button
-              onClickHandler={() => navigate("/project")}
-              className="border-[1px] border-solid border-(--color-button-border) bg-(--color-button-primary) text-(--color-font-primary) transition duration-300 ease-in-out hover:translate-y-1 hover:bg-(--color-button-hover) active:bg-(--color-button-active) lg:hidden"
-            >
-              View All
-            </Button>
-          </div>
+            </span>
+          </h2>
 
-          <span className="horizontal_wraper item-center hide-scrollbar flex w-full justify-center">
-            <span className="horizontal_container grid grid-flow-col grid-rows-3 gap-4 overflow-x-hidden pb-2 md:grid-cols-2 md:grid-rows-2 md:gap-8">
-              {projectDetails.map(({ title, image, url, tags }, index) => {
+          <div className="flex flex-col items-center justify-start md:grid grid-cols-2 gap-4 lg:grid-cols-3">
+            {projectDetails.map(
+              ({ title, image, url, tags, github, description }, index) => {
                 return (
                   <Card
                     key={index}
@@ -70,11 +27,13 @@ export default function Projects() {
                     title={title}
                     url={url}
                     tag={tags}
+                    description={description}
+                    github={github}
                   />
                 );
-              })}
-            </span>
-          </span>
+              },
+            )}
+          </div>
 
           <Button
             onClickHandler={() => navigate("/project")}
