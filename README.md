@@ -1,51 +1,66 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🌐 Developer Portfolio
 
-Currently, two official plugins are available:
+A simple and sleek personal portfolio built using **React**, **Tailwind CSS**, and **Vite** to showcase my frontend skills, featured projects, and tech stack — all wrapped in a minimal, responsive UI.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🚀 **Live Demo**: [shrey-prajapati-portfolio.vercel.app](https://shrey-prajapati-portfolio.vercel.app)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 📌 About
 
-- Configure the top-level `parserOptions` property like this:
+Hey there! I'm **Shrey Prajapati**, a Full-Stack Web Developer who loves building clean and interactive user interfaces.  
+This portfolio reflects not just my work but the way I approach design and development — with simplicity, clarity, and consistency.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+---
+
+## 🛠️ Tech Stack
+
+- ⚛️ React
+- 🎨 Tailwind CSS
+- ⚡ Vite
+- 💾 Deployed on Vercel
+
+---
+
+## 📂 Sections Included
+
+- **Hero** – Catchy intro with a call to action  
+- **About** – A brief intro about me and what I do  
+- **Projects** – Showcases of my featured work  
+- **Tech Stack** – Tools and technologies I use  
+
+---
+
+## 🧑‍💻 Development
+
+To run locally:
+
+```bash
+# Clone the repository
+git clone https://github.com/cd-Shrey13/Portfolio.git
+
+# Navigate into the project directory
+cd Portfolio
+
+# Install dependencies
+npm install
+
+# Run the development server
+npm run dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Then go to [http://localhost:5173](http://localhost:5173) to view it in your browser.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+---
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
-# Portfolio
+## 🙌 Acknowledgments
+
+This project is a solo build made with 💟 to represent my developer identity online.  
+Inspired by clean design principles and optimized for performance.
+
+---
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).
